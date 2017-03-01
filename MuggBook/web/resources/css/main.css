@@ -16,21 +16,25 @@ html {
 /* line 15, ../sass/main.scss */
 body {
   background-image: url("../img/bg.jpg");
-  background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   width: 100%;
   height: 100%;
 }
 
-/* line 22, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 #login {
   background-color: rgba(0, 177, 106, 0.7);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.8), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
-/* line 24, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 #login .row {
   margin-right: 0;
 }
 
-/* line 30, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 #logo p {
   font-family: 'Mr Dafoe', cursive;
   font-size: 5em;
@@ -38,72 +42,88 @@ body {
   text-align: center;
 }
 
-/* line 38, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 table {
   width: 100%;
   margin-top: 2%;
 }
-/* line 41, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 table tbody {
   width: 100%;
 }
-/* line 44, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 table tbody tr td {
   margin-right: 5%;
 }
 
-/* line 50, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 .top-bar {
   /*margin-top:5%;*/
 }
-/* line 51, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .top-bar input[type="text"], .top-bar input[type="password"] {
   width: 90%;
 }
-/* line 54, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .top-bar button {
   width: 130px;
   height: 40px;
-  border-radius: 15px;
-  border: 3px solid white;
-  background: #1ba39c;
-  -moz-animation: colorTrans 5s infinite;
-  /* Firefox */
-  -webkit-animation: colorTrans 5s infinite;
-  /* Safari and Chrome */
-  box-shadow: 10px 10px 5px #00b16a;
+  border-radius: 5px;
+  background: green;
+  /*box-shadow: 10px 10px 55px  rgb(41,240,97);*/
+}
+/* line 66, ../sass/main.scss */
+.top-bar button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.94), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-@-moz-keyframes colorTrans {
-  /* line 70, ../sass/main.scss */
-  0% {
-    background: #1ba39c;
-  }
-
-  /* line 71, ../sass/main.scss */
-  50% {
-    background: yellow;
-  }
-
-  /* line 72, ../sass/main.scss */
-  100% {
-    background: green;
-  }
+/* line 73, ../sass/main.scss */
+.signup_cont {
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-@-webkit-keyframes colorTrans {
-  /* line 77, ../sass/main.scss */
-  0% {
-    background: #1ba39c;
-  }
+/* line 78, ../sass/main.scss */
+#info_signup {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding-bottom: 3%;
+}
 
-  /* line 78, ../sass/main.scss */
-  50% {
-    background: yellow;
-  }
+/* line 96, ../sass/main.scss */
+div.parallelogram {
+  display: block;
+  width: 80%;
+  height: 600px;
+  background: rgba(0, 71, 171, 0.7);
+  transform: skew(10deg);
+  -ms-transform: skew(10deg);
+  /* IE 9 */
+  -webkit-transform: skew(10deg);
+  /* Safari */
+}
 
-  /* line 79, ../sass/main.scss */
-  100% {
-    background: #2ecc71;
-  }
+/* line 101, ../sass/main.scss */
+#newAccount {
+  margin-top: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  height: 50px;
+  color: white;
+  background: green;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  line-height: 1.5;
+}
+
+/* line 114, ../sass/main.scss */
+#newAccount:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.94), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* line 118, ../sass/main.scss */
+hr {
+  color: black;
+  background-color: black;
+  height: 2px;
 }

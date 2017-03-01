@@ -30,12 +30,11 @@
                 <div class="col-sm-6">
                     <div id="logo">
                         <p>S-Talk <i class="fa fa-share-alt" style="color:rgb(44, 62, 80);"></i></p>
-
                     </div>
                 </div>               
                 <div class="col-sm-6">
                     <div class="top-bar">
-                        <form method="POST" action="">
+                        <form method="POST" action="login">
                             <table>
                                 <tbody>
                                     <tr>
@@ -43,9 +42,9 @@
                                         <td><label>Password</label></td>
                                     </tr>
                                     <tr>
-                                        <td><input type="text" name="Email" class="form-control"/></td>
-                                        <td><input type="password" name="Pwd" class="form-control"/></td>
-                                        <td><button type="submit"><span class="glyphicon glyphicon-log-in"></span> Login</button></td>
+                                        <td><input type="text" name="email" class="form-control"/></td>
+                                        <td><input type="password" name="pwd" class="form-control"/></td>
+                                        <td><button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-log-in"></span> Login</button></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -54,17 +53,35 @@
                 </div>               
             </div>
         </div>
-        <div class="container">
+        <div>
+            <p><h1 style="color:white;text-align: center;margin-top:5%;">New user? Sign up now quickly!</h1></p>
+        </div>
+        <div class="container signup_cont">
             <div class="row">
                 <div class="col-sm-6">
-
+                    <!--div class="parallelogram">
+                        <div class="col-sm-4">
+                            
+                        </div>
+                        <div class="col-sm-4">
+                            
+                        </div>
+                        <div class="col-sm-4">
+                            
+                        </div>
+                    </div-->
                 </div>
-                <div class="col-sm-6">
-                     <form action="" method="POST">
+                <div class="col-sm-6" id="info_signup">
+                     <form action="signup" method="POST">      
+                         <h3>Profile Information</h3>
+                         <hr/>
                         <label>Email</label>
                         <input type="text" name="Email_SignUp" class="form-control"/>
                         <label>Password</label>
                         <input type="password" name="Pwd_SignUp" class="form-control"/>
+                        
+                        <h3>Personal Information</h3>
+                        <hr />
                         <label>First Name</label>
                         <input type="text" name="fname" class="form-control"/>
                         <label>Last Name</label>
@@ -72,18 +89,27 @@
                         <label>Middle Name</label>
                         <input type="text" name="mname" class="form-control"/>
                         <label>Country</label>
-                        <select class="form-control">
+                        <select class="form-control" name="country">
                             <option>United States</option>
                             <option>Canada</option>
                         </select>
                         <label>City</label>
-                        <select class="form-control">
+                        <select class="form-control" name="city">
                             <option>United States</option>
                             <option>Canada</option>
                         </select>
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <button type="submit" id="newAccount">
+                                Create Account
+                                <span class="glyphicon glyphicon-user"></span>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
+        <footer>
+            
+        </footer>
     </body>
 </html>

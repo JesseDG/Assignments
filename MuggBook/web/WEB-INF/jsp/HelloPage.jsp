@@ -13,6 +13,13 @@
     </head>
     <body>
         <h1>Spring MVC</h1>
-        <h2>${msg}</h2>
+        <h2>
+            <%
+                String[] requests = (String[])request.getAttribute("msg");
+                for(int i=0;i<requests.length;i++){
+                    out.print(requests[i] + " ");
+                }
+            %>
+        </h2>
     </body>
 </html>
