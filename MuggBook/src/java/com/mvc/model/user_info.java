@@ -16,24 +16,33 @@ import javax.persistence.Entity;
  */
 
 @Entity
-@Table(name="user_information")
-public class user_information {
+@Table(name="user_info")
+public class user_info{
     
     @Id
-    public int user_id;   
+    public int user_info_id;   
     public String first_name;
     public String middle_name;
     public String last_name;
     public String city;
     public String country;
+    public int user_profile_id;
+
+    public int getUser_profile_id() {
+        return user_profile_id;
+    }
+
+    public void setUser_profile_id(int user_profile_id) {
+        this.user_profile_id = user_profile_id;
+    }
     
 
     public int getUser_id() {
-        return user_id;
+        return user_info_id;
     }
 
     public void setUser_id(int user_id) {
-        this.user_id = user_id;
+        this.user_info_id = user_id;
     }
 
     public String getFirst_name() {
