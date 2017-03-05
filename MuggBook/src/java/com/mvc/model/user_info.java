@@ -6,10 +6,11 @@
 package com.mvc.model;
 
 
+import javax.persistence.Column;
 import javax.persistence.Table;
 import javax.persistence.Id;
 import javax.persistence.Entity;
-
+import java.io.Serializable;
 /**
  *
  * @author cstuser
@@ -17,10 +18,9 @@ import javax.persistence.Entity;
 
 @Entity
 @Table(name="user_info")
-public class user_info{
+public class user_info implements Serializable{
     
-    @Id
-    public int user_info_id;   
+    public int user_info_id;  
     public String first_name;
     public String middle_name;
     public String last_name;
@@ -28,6 +28,7 @@ public class user_info{
     public String country;
     public int user_profile_id;
 
+    @Column(name="USER_PROFILE_ID")
     public int getUser_profile_id() {
         return user_profile_id;
     }
@@ -36,7 +37,8 @@ public class user_info{
         this.user_profile_id = user_profile_id;
     }
     
-
+    @Id
+    @Column(name="USER_INFO_ID")
     public int getUser_id() {
         return user_info_id;
     }
@@ -45,6 +47,7 @@ public class user_info{
         this.user_info_id = user_id;
     }
 
+    @Column(name="FIRST_NAME")
     public String getFirst_name() {
         return first_name;
     }
@@ -53,6 +56,7 @@ public class user_info{
         this.first_name = first_name;
     }
 
+    @Column(name="MIDDLE_NAME")
     public String getMiddle_name() {
         return middle_name;
     }
@@ -61,6 +65,7 @@ public class user_info{
         this.middle_name = middle_name;
     }
 
+    @Column(name="LAST_NAME")
     public String getLast_name() {
         return last_name;
     }
@@ -69,6 +74,7 @@ public class user_info{
         this.last_name = last_name;
     }
 
+    @Column(name="CITY")
     public String getCity() {
         return city;
     }
@@ -77,6 +83,7 @@ public class user_info{
         this.city = city;
     }
 
+    @Column(name="COUNTRY")
     public String getCountry() {
         return country;
     }

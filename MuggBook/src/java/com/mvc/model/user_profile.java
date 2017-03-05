@@ -5,6 +5,7 @@
  */
 package com.mvc.model;
 
+import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -41,19 +42,22 @@ public class user_profile {
         this.salt = salt;
     }
 
-
+    @Column(name="USER_ID")
     public int getUser_id() {
         return user_id;
     }
 
+    @Column(name="EMAIL")
     public String getEmail() {
         return email;
     }
 
+    @Column(name="PASSWORD_HASH")
     public String getPassword_hash() {
         return password_hash;
     }
 
+    @Column(name="SALT")
     public String getSalt() {
         return salt;
     }
